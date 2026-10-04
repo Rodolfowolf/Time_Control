@@ -65,5 +65,5 @@ grafico1 = px.bar(hour_control, x="Address", y="Total", title="Worked Hours by A
 st.plotly_chart(grafico1)
 
 #grafico de pizza = venda por produto
-#grafico2 = px.pie(tabela_vendas, names="produto", values="valor", title="Vendas por Produto")
-#st.plotly_chart(grafico2)
+grafico2 = px.pie(hour_control, names="Address", values="Total", title="Worked Hours by Address")
+st.plotly_chart(grafico2)
