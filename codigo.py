@@ -58,12 +58,13 @@ st.dataframe(hour_control)
 st.write("### Dashboard")
 #card/metrica = total worked hours
 total = hour_control["Total"].sum()
-st.metric("Total Hours Worked", f"{total} hours")
-
-#grafico de barra = venda por vendedor
-grafico1 = px.bar(hour_control, x="Address", y="Total", title="Worked Hours by Address")
-st.plotly_chart(grafico1)
+st.metric("Total Worked Hours", f"{total} hours")
 
 #grafico de pizza = venda por produto
-grafico2 = px.pie(hour_control, names="Address", values="Total", title="Worked Hours by Address")
+grafico1 = px.pie(hour_control, names="Address", values="Total", title="Worked Hours by Address")
+st.plotly_chart(grafico1)
+
+#grafico de barra = venda por vendedor
+grafico2 = px.bar(hour_control, x="Address", y="Total", title="Worked Hours by Address")
 st.plotly_chart(grafico2)
+
