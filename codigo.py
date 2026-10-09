@@ -67,4 +67,3 @@ st.plotly_chart(grafico1)
 #grafico de barra = venda por vendedor
 grafico2 = px.bar(hour_control, x="Address", y="Total", title="Worked Hours by Address")
 st.plotly_chart(grafico2)
-
